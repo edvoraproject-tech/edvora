@@ -1,0 +1,974 @@
+[
+  {
+    "courseCode": "CS101",
+    "courseName": "Programming Fundamentals (Python)",
+    "track": "CS",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Automate the Boring Stuff with Python (Online Book)",
+        "url": "https://automatetheboringstuff.com/"
+      },
+      {
+        "type": "video",
+        "title": "Python for Everybody (Coursera)",
+        "url": "https://www.coursera.org/specializations/python"
+      },
+      {
+        "type": "mix",
+        "title": "Python for Everybody (Coursera)",
+        "url": "https://www.coursera.org/specializations/python"
+      }
+    ],
+    "legacy": {
+      "courseCode": "CS101",
+      "courseName": "Programming Fundamentals (Python)"
+    }
+  },
+  {
+    "courseCode": "CS102",
+    "courseName": "Object-Oriented Programming (OOP)",
+    "track": "CS",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Head First Java (Sierra & Bates)",
+        "url": "https://www.oreilly.com/library/view/head-first-java/0596009208/"
+      },
+      {
+        "type": "video",
+        "title": "Java Programming and Software Engineering Fundamentals (Coursera)",
+        "url": "https://www.coursera.org/specializations/java-programming"
+      },
+      {
+        "type": "mix",
+        "title": "Head First Java + Coursera Java (Pack)",
+        "url": "https://www.coursera.org/specializations/java-programming"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SE101",
+      "courseName": "Object-Oriented Programming (OOP)"
+    }
+  },
+  {
+    "courseCode": "CS103",
+    "courseName": "Calculus I",
+    "track": "CS",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "OpenStax — Calculus Volume 1",
+        "url": "https://openstax.org/details/books/calculus-volume-1/"
+      },
+      {
+        "type": "video",
+        "title": "MIT OpenCourseWare: Single Variable Calculus",
+        "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/"
+      },
+      {
+        "type": "mix",
+        "title": "MIT OCW + OpenStax (Calculus Pack)",
+        "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "MATH101",
+      "courseName": "Calculus I"
+    }
+  },
+  {
+    "courseCode": "CS201",
+    "courseName": "Data Structures",
+    "track": "CS",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Data Structures and Algorithms in Python (Goodrich)",
+        "url": "https://www.wiley.com/en-us/Data+Structures+and+Algorithms+in+Python-p-9781118290279"
+      },
+      {
+        "type": "video",
+        "title": "UC Berkeley CS 61B — Data Structures",
+        "url": "https://www2.eecs.berkeley.edu/Courses/CS61B/"
+      },
+      {
+        "type": "mix",
+        "title": "Book + UC Berkeley CS 61B (Data Structures)",
+        "url": "https://www2.eecs.berkeley.edu/Courses/CS61B/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "CS102",
+      "courseName": "Data Structures"
+    }
+  },
+  {
+    "courseCode": "CS202",
+    "courseName": "Algorithms",
+    "track": "CS",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Introduction to Algorithms (CLRS)",
+        "url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/"
+      },
+      {
+        "type": "video",
+        "title": "MIT OCW 6.006 — Introduction to Algorithms",
+        "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+      },
+      {
+        "type": "mix",
+        "title": "CLRS + MIT OCW 6.006 (Algorithms Pack)",
+        "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "CS201",
+      "courseName": "Algorithms"
+    }
+  },
+  {
+    "courseCode": "CS203",
+    "courseName": "Linear Algebra",
+    "track": "CS",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Linear Algebra (Jim Hefferon) — Free Textbook",
+        "url": "https://jheffero.w3.uvm.edu/linearalgebra/index.html"
+      },
+      {
+        "type": "video",
+        "title": "MIT OCW: Linear Algebra (Gilbert Strang)",
+        "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"
+      },
+      {
+        "type": "mix",
+        "title": "MIT OCW 18.06 + Hefferon Textbook (Linear Algebra Pack)",
+        "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "MATH102",
+      "courseName": "Linear Algebra"
+    }
+  },
+  {
+    "courseCode": "CS301",
+    "courseName": "Operating Systems",
+    "track": "CS",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Operating System Concepts (Silberschatz)",
+        "url": "https://www.os-book.com/OS9/"
+      },
+      {
+        "type": "video",
+        "title": "MIT OCW 6.1810 — Operating System Engineering",
+        "url": "https://ocw.mit.edu/courses/6-1810-operating-system-engineering-fall-2023/"
+      },
+      {
+        "type": "mix",
+        "title": "OS Book + MIT OCW 6.1810 (OS Pack)",
+        "url": "https://ocw.mit.edu/courses/6-1810-operating-system-engineering-fall-2023/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "CS202",
+      "courseName": "Operating Systems"
+    }
+  },
+  {
+    "courseCode": "CS302",
+    "courseName": "Computer Networks",
+    "track": "CS",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Computer Networking: A Top-Down Approach (Kurose & Ross)",
+        "url": "https://gaia.cs.umass.edu/kurose_ross/index.php"
+      },
+      {
+        "type": "video",
+        "title": "Stanford CS144 — Introduction to Computer Networking",
+        "url": "https://cs144.github.io/"
+      },
+      {
+        "type": "mix",
+        "title": "Top-Down + Stanford CS144 (Networking Pack)",
+        "url": "https://cs144.github.io/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "CS203",
+      "courseName": "Computer Networks"
+    }
+  },
+  {
+    "courseCode": "CS303",
+    "courseName": "Database Systems",
+    "track": "CS",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Database System Concepts (Silberschatz)",
+        "url": "https://www.db-book.com/"
+      },
+      {
+        "type": "video",
+        "title": "CMU 15-445 — Intro to Database Systems",
+        "url": "https://15445.courses.cs.cmu.edu/fall2024/"
+      },
+      {
+        "type": "mix",
+        "title": "DB Book + CMU 15-445 (Databases Pack)",
+        "url": "https://15445.courses.cs.cmu.edu/fall2024/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "CS204",
+      "courseName": "Databases"
+    }
+  },
+  {
+    "courseCode": "CS401",
+    "courseName": "Machine Learning",
+    "track": "CS",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "CS229 Machine Learning Notes (Stanford)",
+        "url": "https://cs229.stanford.edu/"
+      },
+      {
+        "type": "video",
+        "title": "Machine Learning (Andrew Ng) — Coursera",
+        "url": "https://www.coursera.org/learn/machine-learning"
+      },
+      {
+        "type": "mix",
+        "title": "Andrew Ng + CS229 Notes (ML Pack)",
+        "url": "https://cs229.stanford.edu/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "AI101",
+      "courseName": "Introduction to Machine Learning"
+    }
+  },
+  {
+    "courseCode": "CS402",
+    "courseName": "Deep Learning",
+    "track": "CS",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Deep Learning (Goodfellow, Bengio, Courville)",
+        "url": "https://www.deeplearningbook.org/"
+      },
+      {
+        "type": "video",
+        "title": "fast.ai — Practical Deep Learning for Coders",
+        "url": "https://course.fast.ai/"
+      },
+      {
+        "type": "mix",
+        "title": "Deep Learning Book + fast.ai (Pack)",
+        "url": "https://course.fast.ai/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "AI201",
+      "courseName": "Deep Learning"
+    }
+  },
+  {
+    "courseCode": "CS403",
+    "courseName": "Computer Vision",
+    "track": "CS",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Dive into Deep Learning (D2L) — Computer Vision Chapters",
+        "url": "https://d2l.ai/"
+      },
+      {
+        "type": "video",
+        "title": "Stanford CS231n: CNNs for Visual Recognition",
+        "url": "https://cs231n.stanford.edu/"
+      },
+      {
+        "type": "mix",
+        "title": "CS231n + D2L (Computer Vision Pack)",
+        "url": "https://cs231n.stanford.edu/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "AI203",
+      "courseName": "Computer Vision"
+    }
+  },
+  {
+    "courseCode": "IT101",
+    "courseName": "Networking Fundamentals",
+    "track": "IT",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Computer Networking: A Top-Down Approach (Book Site)",
+        "url": "https://gaia.cs.umass.edu/kurose_ross/index.php"
+      },
+      {
+        "type": "video",
+        "title": "Cisco Networking Academy Intro",
+        "url": "https://www.netacad.com/"
+      },
+      {
+        "type": "mix",
+        "title": "NetAcad + Top-Down (Networking Pack)",
+        "url": "https://www.netacad.com/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "IT101",
+      "courseName": "Networking Fundamentals"
+    }
+  },
+  {
+    "courseCode": "IT102",
+    "courseName": "Systems Administration (Linux)",
+    "track": "IT",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Linux Command Line + edX Intro to Linux (Pack) (book)",
+        "url": "https://linuxcommand.org/tlcl.php"
+      },
+      {
+        "type": "video",
+        "title": "edX — Introduction to Linux (LinuxFoundationX)",
+        "url": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux"
+      },
+      {
+        "type": "mix",
+        "title": "Linux Command Line + edX Intro to Linux (Pack)",
+        "url": "https://linuxcommand.org/tlcl.php"
+      }
+    ],
+    "legacy": {
+      "courseCode": "IT201",
+      "courseName": "Systems Administration (Linux)"
+    }
+  },
+  {
+    "courseCode": "IT103",
+    "courseName": "Cybersecurity Fundamentals",
+    "track": "IT",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "OWASP Top 10",
+        "url": "https://owasp.org/www-project-top-ten/"
+      },
+      {
+        "type": "video",
+        "title": "Cybrary Intro to Cybersecurity",
+        "url": "https://www.cybrary.it/"
+      },
+      {
+        "type": "mix",
+        "title": "Cybrary Intro to Cybersecurity",
+        "url": "https://www.cybrary.it/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SEC101",
+      "courseName": "Cybersecurity Fundamentals"
+    }
+  },
+  {
+    "courseCode": "IT201",
+    "courseName": "Cloud Computing",
+    "track": "IT",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "AWS Well-Architected Framework",
+        "url": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html"
+      },
+      {
+        "type": "video",
+        "title": "AWS Cloud Practitioner Essentials",
+        "url": "https://explore.skillbuilder.aws/learn"
+      },
+      {
+        "type": "mix",
+        "title": "AWS Skill Builder + Well-Architected (Cloud Pack)",
+        "url": "https://explore.skillbuilder.aws/learn"
+      }
+    ],
+    "legacy": {
+      "courseCode": "IT202",
+      "courseName": "Cloud Computing"
+    }
+  },
+  {
+    "courseCode": "IT202",
+    "courseName": "Database Administration",
+    "track": "IT",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "PostgreSQL Documentation",
+        "url": "https://www.postgresql.org/docs/"
+      },
+      {
+        "type": "video",
+        "title": "PostgreSQL First Steps (Official Wiki)",
+        "url": "https://wiki.postgresql.org/wiki/First_steps"
+      },
+      {
+        "type": "mix",
+        "title": "PostgreSQL Documentation",
+        "url": "https://www.postgresql.org/docs/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "IT203",
+      "courseName": "Database Administration"
+    }
+  },
+  {
+    "courseCode": "IT203",
+    "courseName": "IT Project Management",
+    "track": "IT",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "PMBOK Guide (PMI)",
+        "url": "https://www.pmi.org/pmbok-guide-standards"
+      },
+      {
+        "type": "video",
+        "title": "Google Project Management (Coursera)",
+        "url": "https://www.coursera.org/professional-certificates/google-project-management"
+      },
+      {
+        "type": "mix",
+        "title": "PMBOK + Google PM (Pack)",
+        "url": "https://www.pmi.org/pmbok-guide-standards"
+      }
+    ],
+    "legacy": {
+      "courseCode": "IT204",
+      "courseName": "IT Project Management"
+    }
+  },
+  {
+    "courseCode": "IT301",
+    "courseName": "Web Application Security",
+    "track": "IT",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "OWASP Top 10",
+        "url": "https://owasp.org/www-project-top-ten/"
+      },
+      {
+        "type": "video",
+        "title": "OWASP Top 10",
+        "url": "https://owasp.org/www-project-top-ten/"
+      },
+      {
+        "type": "mix",
+        "title": "OWASP Top 10",
+        "url": "https://owasp.org/www-project-top-ten/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SEC203",
+      "courseName": "Web Application Security"
+    }
+  },
+  {
+    "courseCode": "IT302",
+    "courseName": "Ethical Hacking (Penetration Testing)",
+    "track": "IT",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Kali Linux Documentation",
+        "url": "https://www.kali.org/docs/"
+      },
+      {
+        "type": "video",
+        "title": "Kali Linux Documentation",
+        "url": "https://www.kali.org/docs/"
+      },
+      {
+        "type": "mix",
+        "title": "Kali Linux Revealed + Labs",
+        "url": "https://www.kali.org/docs/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SEC202",
+      "courseName": "Ethical Hacking (Penetration Testing)"
+    }
+  },
+  {
+    "courseCode": "IT303",
+    "courseName": "Digital Forensics",
+    "track": "IT",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Digital Forensics and Incident Response (H. Carvey)",
+        "url": "https://www.elsevier.com/books/digital-forensics-and-incident-response/carvey/978-0-12-803660-0"
+      },
+      {
+        "type": "video",
+        "title": "Digital Forensics (NPTEL) — Course Page",
+        "url": "https://nptel.ac.in/courses/106/105/106105217/"
+      },
+      {
+        "type": "mix",
+        "title": "Digital Forensics + NPTEL (Pack)",
+        "url": "https://nptel.ac.in/courses/106/105/106105217/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SEC204",
+      "courseName": "Digital Forensics"
+    }
+  },
+  {
+    "courseCode": "IT401",
+    "courseName": "Cryptography",
+    "track": "IT",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Crypto 101 (Free Book)",
+        "url": "https://www.crypto101.io/"
+      },
+      {
+        "type": "video",
+        "title": "Cryptography I (Dan Boneh)",
+        "url": "https://www.coursera.org/learn/crypto"
+      },
+      {
+        "type": "mix",
+        "title": "Crypto I (Dan Boneh) + Crypto101 (Pack)",
+        "url": "https://www.coursera.org/learn/crypto"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SEC201",
+      "courseName": "Cryptography"
+    }
+  },
+  {
+    "courseCode": "IT402",
+    "courseName": "DevOps and Deployment Practices",
+    "track": "IT",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "The DevOps Handbook",
+        "url": "https://itrevolution.com/product/the-devops-handbook/"
+      },
+      {
+        "type": "video",
+        "title": "Google SRE Book (Online) — Supporting DevOps Practices",
+        "url": "https://sre.google/sre-book/table-of-contents/"
+      },
+      {
+        "type": "mix",
+        "title": "DevOps Handbook + Google SRE Book (Pack)",
+        "url": "https://sre.google/sre-book/table-of-contents/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SE205",
+      "courseName": "DevOps and Deployment Practices"
+    }
+  },
+  {
+    "courseCode": "IT403",
+    "courseName": "AI Ethics",
+    "track": "IT",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Elements of AI",
+        "url": "https://www.elementsofai.com/"
+      },
+      {
+        "type": "video",
+        "title": "Elements of AI",
+        "url": "https://www.elementsofai.com/"
+      },
+      {
+        "type": "mix",
+        "title": "Elements of AI",
+        "url": "https://www.elementsofai.com/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "AI205",
+      "courseName": "AI Ethics"
+    }
+  },
+  {
+    "courseCode": "IS101",
+    "courseName": "Probability and Statistics",
+    "track": "IS",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Introduction to Probability (Blitzstein & Hwang)",
+        "url": "https://projects.iq.harvard.edu/stat110/home"
+      },
+      {
+        "type": "video",
+        "title": "Harvard Stat110 — Course Home",
+        "url": "https://projects.iq.harvard.edu/stat110/home"
+      },
+      {
+        "type": "mix",
+        "title": "Stat110 (Text + Lectures)",
+        "url": "https://projects.iq.harvard.edu/stat110/home"
+      }
+    ],
+    "legacy": {
+      "courseCode": "MATH201",
+      "courseName": "Probability and Statistics"
+    }
+  },
+  {
+    "courseCode": "IS102",
+    "courseName": "SQL for Analysts",
+    "track": "IS",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Mode SQL Tutorial",
+        "url": "https://mode.com/sql-tutorial/"
+      },
+      {
+        "type": "video",
+        "title": "SQL Tutorial — freeCodeCamp (Playlist)",
+        "url": "https://www.youtube.com/playlist?list=PL13eGWMVfbjBaebtmUn-xgMXjF1blrOmP"
+      },
+      {
+        "type": "mix",
+        "title": "Mode SQL Tutorial + Video (SQL Pack)",
+        "url": "https://mode.com/sql-tutorial/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "DS203",
+      "courseName": "SQL for Analysts"
+    }
+  },
+  {
+    "courseCode": "IS103",
+    "courseName": "Introduction to Data Science",
+    "track": "IS",
+    "level": 1,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Python Data Science Handbook (Online)",
+        "url": "https://jakevdp.github.io/PythonDataScienceHandbook/"
+      },
+      {
+        "type": "video",
+        "title": "IBM Data Science Professional Certificate (Coursera)",
+        "url": "https://www.coursera.org/professional-certificates/ibm-data-science"
+      },
+      {
+        "type": "mix",
+        "title": "IBM Data Science Professional Certificate (Coursera)",
+        "url": "https://www.coursera.org/professional-certificates/ibm-data-science"
+      }
+    ],
+    "legacy": {
+      "courseCode": "DS101",
+      "courseName": "Introduction to Data Science"
+    }
+  },
+  {
+    "courseCode": "IS201",
+    "courseName": "Data Analysis with Python",
+    "track": "IS",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Pandas Documentation",
+        "url": "https://pandas.pydata.org/docs/"
+      },
+      {
+        "type": "video",
+        "title": "Kaggle Learn — Pandas",
+        "url": "https://www.kaggle.com/learn/pandas"
+      },
+      {
+        "type": "mix",
+        "title": "Pandas Docs + Kaggle Learn (Pack)",
+        "url": "https://pandas.pydata.org/docs/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "DS102",
+      "courseName": "Data Analysis with Python"
+    }
+  },
+  {
+    "courseCode": "IS202",
+    "courseName": "Data Visualization",
+    "track": "IS",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Fundamentals of Data Visualization (Online Book)",
+        "url": "https://clauswilke.com/dataviz/"
+      },
+      {
+        "type": "video",
+        "title": "Data Visualization with Python (Coursera)",
+        "url": "https://www.coursera.org/learn/python-for-data-visualization"
+      },
+      {
+        "type": "mix",
+        "title": "Coursera + Online Book (Data Viz Pack)",
+        "url": "https://www.coursera.org/learn/python-for-data-visualization"
+      }
+    ],
+    "legacy": {
+      "courseCode": "DS202",
+      "courseName": "Data Visualization"
+    }
+  },
+  {
+    "courseCode": "IS203",
+    "courseName": "Software Engineering",
+    "track": "IS",
+    "level": 2,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Software Engineering (Sommerville)",
+        "url": "https://www.pearson.com/en-us/subject-catalog/p/software-engineering/P200000006678"
+      },
+      {
+        "type": "video",
+        "title": "Software Engineering — NPTEL (Course Page)",
+        "url": "https://nptel.ac.in/courses/106/105/106105182/"
+      },
+      {
+        "type": "mix",
+        "title": "Sommerville + NPTEL (SE Pack)",
+        "url": "https://nptel.ac.in/courses/106/105/106105182/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SE201",
+      "courseName": "Software Engineering"
+    }
+  },
+  {
+    "courseCode": "IS301",
+    "courseName": "Data Mining",
+    "track": "IS",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Data Mining: Concepts and Techniques (Han, Pei, Kamber)",
+        "url": "https://www.sciencedirect.com/book/9780128117606/data-mining"
+      },
+      {
+        "type": "video",
+        "title": "Mining Massive Datasets (Stanford) — Book Site",
+        "url": "http://www.mmds.org/"
+      },
+      {
+        "type": "mix",
+        "title": "Data Mining Book + MMDS Resources (Pack)",
+        "url": "http://www.mmds.org/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "DS201",
+      "courseName": "Data Mining"
+    }
+  },
+  {
+    "courseCode": "IS302",
+    "courseName": "Software Testing",
+    "track": "IS",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "ISTQB Certified Tester Foundation Level — Certification Page",
+        "url": "https://www.istqb.org/certifications/certified-tester-foundation-level"
+      },
+      {
+        "type": "video",
+        "title": "ISTQB (Official Site)",
+        "url": "https://www.istqb.org/"
+      },
+      {
+        "type": "mix",
+        "title": "ISTQB Foundation Syllabus + Practice",
+        "url": "https://www.istqb.org/certifications/certified-tester-foundation-level"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SE202",
+      "courseName": "Software Testing"
+    }
+  },
+  {
+    "courseCode": "IS303",
+    "courseName": "Agile Methods and Project Management",
+    "track": "IS",
+    "level": 3,
+    "resources": [
+      {
+        "type": "book",
+        "title": "The Scrum Guide",
+        "url": "https://scrumguides.org/"
+      },
+      {
+        "type": "video",
+        "title": "Scrum Guide (Official Site)",
+        "url": "https://scrumguides.org/"
+      },
+      {
+        "type": "mix",
+        "title": "Scrum Guide",
+        "url": "https://scrumguides.org/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SE204",
+      "courseName": "Agile Methods and Project Management"
+    }
+  },
+  {
+    "courseCode": "IS401",
+    "courseName": "Software Architecture",
+    "track": "IS",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Clean Architecture (Robert C. Martin)",
+        "url": "https://www.pearson.com/en-us/subject-catalog/p/clean-architecture/9780134494166"
+      },
+      {
+        "type": "video",
+        "title": "Microsoft Learn — Software Architecture (Browse)",
+        "url": "https://learn.microsoft.com/en-us/training/browse/?terms=software%20architecture"
+      },
+      {
+        "type": "mix",
+        "title": "Clean Architecture + Microsoft Learn (Architecture Pack)",
+        "url": "https://learn.microsoft.com/en-us/training/browse/?terms=software%20architecture"
+      }
+    ],
+    "legacy": {
+      "courseCode": "SE203",
+      "courseName": "Software Architecture"
+    }
+  },
+  {
+    "courseCode": "IS402",
+    "courseName": "Natural Language Processing",
+    "track": "IS",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Speech and Language Processing (Jurafsky & Martin) — Online",
+        "url": "https://web.stanford.edu/~jurafsky/slp3/"
+      },
+      {
+        "type": "video",
+        "title": "Stanford CS224N: NLP with Deep Learning",
+        "url": "https://web.stanford.edu/class/cs224n/"
+      },
+      {
+        "type": "mix",
+        "title": "CS224N + SLP Book (NLP Pack)",
+        "url": "https://web.stanford.edu/~jurafsky/slp3/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "AI202",
+      "courseName": "Natural Language Processing"
+    }
+  },
+  {
+    "courseCode": "IS403",
+    "courseName": "Reinforcement Learning",
+    "track": "IS",
+    "level": 4,
+    "resources": [
+      {
+        "type": "book",
+        "title": "Reinforcement Learning: An Introduction (Sutton & Barto) — Book Site",
+        "url": "http://incompleteideas.net/book/the-book-2nd.html"
+      },
+      {
+        "type": "video",
+        "title": "David Silver — Reinforcement Learning (UCL)",
+        "url": "https://davidstarsilver.wordpress.com/teaching/"
+      },
+      {
+        "type": "mix",
+        "title": "Spinning Up + Silver Course + Sutton&Barto (RL Pack)",
+        "url": "https://spinningup.openai.com/"
+      }
+    ],
+    "legacy": {
+      "courseCode": "AI204",
+      "courseName": "Reinforcement Learning"
+    }
+  }
+]
