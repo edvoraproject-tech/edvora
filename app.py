@@ -200,7 +200,7 @@ Return JSON only. No markdown, no extra text.
 """.strip()
 
     resp = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         contents=prompt,
         config=genai_types.GenerateContentConfig(
             response_mime_type="application/json",
@@ -252,7 +252,7 @@ Input JSON:
 """.strip()
 
     resp = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         contents=prompt,
         config=genai_types.GenerateContentConfig(
             response_mime_type="application/json",
@@ -308,7 +308,7 @@ courseCode, courseName, resource.title, resource.url
 """.strip()
 
     resp = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         contents=prompt,
     )
     return (resp.text or "").strip() or IRRELEVANT_MSG_AR
