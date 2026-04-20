@@ -63,7 +63,6 @@ ALLOWED_DOMAINS = {
     "coursera.org",
 }
 
-
 def url_is_allowed(u: str) -> bool:
     if not u or not isinstance(u, str):
         return False
@@ -78,6 +77,36 @@ def url_is_allowed(u: str) -> bool:
     except Exception:
         return False
 
+# ── Error helpers ───────────────────────────────────────────────────
+def api_error_response(message, code=500, details=None):
+    payload = {
+        "error": {
+            "code": int(code),
+            "message": str(message).strip()
+        }
+    }
+    if details is not None:
+        payload["error"]["details"] = details
+    return jsonify(payload), int(code)
+
+def gemini_error_response(exc, default_code=503):
+    code = getattr(exc, "status_code", None) or getattr(exc, "code", None) or default_code
+    try:
+        code = int(code)
+    except Exception:
+        code = default_code
+
+    msg = str(exc).strip() or "Gemini request failed"
+
+    return jsonify({
+        "error": {
+            "code": code,
+            "message": msg
+        }
+    }), code
+
+def is_gemini_exception(exc) -> bool:
+    return getattr(exc, "status_code", None) is not None or getattr(exc, "code", None) is not None
 
 # ── Flask app ───────────────────────────────────────────────────────
 app = Flask(__name__)
@@ -88,13 +117,11 @@ LearningStyle = Literal["video", "book", "mix"]
 LevelEnum = Literal["beginner", "intermediate", "advanced"]
 CurrentLevelEnum = Literal["beginner", "intermediate", "advanced"]
 
-
 # ── Request models ──────────────────────────────────────────────────
 class InputCourse(BaseModel):
     courseCode: str = Field(..., min_length=2)
     courseName: str = Field(..., min_length=2)
     skillLevel: LevelEnum = "intermediate"
-
 
 class RoadmapLiteRequest(BaseModel):
     learning_style: LearningStyle
@@ -102,7 +129,6 @@ class RoadmapLiteRequest(BaseModel):
     weeklyHours: float = Field(default=12, gt=0, le=80)
     currentLevel: CurrentLevelEnum = "intermediate"
     courses: List[InputCourse] = Field(..., min_length=1, max_length=10)
-
 
 class ChatRequest(BaseModel):
     learning_style: LearningStyle
@@ -112,13 +138,11 @@ class ChatRequest(BaseModel):
     courses: List[InputCourse] = Field(..., min_length=1, max_length=10)
     question: str = Field(..., min_length=1)
 
-
 # ── Response schemas ────────────────────────────────────────────────
 class Resource(BaseModel):
     type: Literal["book", "video", "mix"]
     title: str
     url: str
-
 
 class CourseLitePlan(BaseModel):
     courseCode: str
@@ -128,7 +152,6 @@ class CourseLitePlan(BaseModel):
     plan_ar: List[str] = Field(..., min_length=5, max_length=5)
     note: Optional[str] = None
 
-
 class RoadmapLiteResponse(BaseModel):
     learning_style: LearningStyle
     weeklyHours: float
@@ -136,11 +159,9 @@ class RoadmapLiteResponse(BaseModel):
     academic_goal: str
     courses: List[CourseLitePlan]
 
-
 class GeminiResourcePick(BaseModel):
     resource: Optional[Resource] = None
     note: Optional[str] = None
-
 
 # ── Catalog helpers ─────────────────────────────────────────────────
 def pick_resource_from_catalog(course_obj: dict, learning_style: str) -> Optional[dict]:
@@ -158,7 +179,6 @@ def pick_resource_from_catalog(course_obj: dict, learning_style: str) -> Optiona
         if cand:
             return cand[0]
     return None
-
 
 def gemini_pick_resource(courseName: str, learning_style: str) -> GeminiResourcePick:
     prompt = f"""
@@ -207,18 +227,15 @@ Return JSON only. No markdown, no extra text.
         ),
     )
 
-    # Robust parsing: handle cases where Gemini returns unexpected shapes
     try:
         raw = json.loads(resp.text)
     except Exception:
         return GeminiResourcePick(resource=None, note="Failed to parse Gemini JSON response.")
 
-    # If resource came back as a plain string (URL), wrap it into an object
     res = raw.get("resource")
     if isinstance(res, str):
         raw["resource"] = {"type": learning_style, "title": courseName, "url": res}
     elif isinstance(res, dict):
-        # Ensure all required keys exist
         res.setdefault("type", learning_style)
         res.setdefault("title", courseName)
         res.setdefault("url", "")
@@ -231,7 +248,6 @@ Return JSON only. No markdown, no extra text.
     if pick.resource and not url_is_allowed(pick.resource.url):
         return GeminiResourcePick(resource=None, note="Model suggested non-allowlisted URL, rejected.")
     return pick
-
 
 def generate_5step_plans(payload: dict) -> RoadmapLiteResponse:
     prompt = f"""
@@ -259,13 +275,11 @@ Input JSON:
         ),
     )
 
-    # Robust parsing
     try:
         raw = json.loads(resp.text)
     except Exception:
         raise ValueError("Gemini returned non-JSON response for roadmap.")
 
-    # Fix any course where plan_ar has != 5 items
     for course in raw.get("courses", []):
         plan = course.get("plan_ar", [])
         if not isinstance(plan, list):
@@ -275,7 +289,6 @@ Input JSON:
             plan.append(f"الخطوة {len(plan)+1}: مراجعة عامة")
         course["plan_ar"] = plan
 
-        # Fix resource if it came as a string
         res = course.get("resource")
         if isinstance(res, str):
             course["resource"] = {"type": "mix", "title": res, "url": res} if res.startswith("http") else None
@@ -283,7 +296,6 @@ Input JSON:
             course["resource"] = None
 
     return RoadmapLiteResponse.model_validate(raw)
-
 
 # ── Chat generation ─────────────────────────────────────────────────
 def gemini_course_chat(payload: dict) -> str:
@@ -313,17 +325,14 @@ courseCode, courseName, resource.title, resource.url
     )
     return (resp.text or "").strip() or IRRELEVANT_MSG_AR
 
-
 # ── Routes ──────────────────────────────────────────────────────────
 @app.route("/")
 def home():
     return jsonify({"service": "edvora-api", "status": "running"})
 
-
 @app.route("/health")
 def health():
     return jsonify({"status": "ok"})
-
 
 @app.route("/catalog/courses", methods=["GET"])
 def catalog_courses():
@@ -337,44 +346,48 @@ def catalog_courses():
         })
     return jsonify({"count": len(items), "courses": items})
 
-
 @app.route("/roadmap-lite", methods=["POST"])
 def roadmap_lite():
     try:
         req = RoadmapLiteRequest.model_validate(request.json or {})
     except ValidationError as e:
-        return jsonify({"error": "validation_error", "details": e.errors()}), 400
+        return api_error_response("validation_error", 400, e.errors())
 
     resolved_courses = []
-    for c in req.courses:
-        code = c.courseCode.strip()
-        name = c.courseName.strip()
+    try:
+        for c in req.courses:
+            code = c.courseCode.strip()
+            name = c.courseName.strip()
 
-        if code in CATALOG:
-            cat = CATALOG[code]
-            r = pick_resource_from_catalog(cat, req.learning_style)
-            resource = None
-            note = None
-            if r and r.get("url"):
-                resource = {"type": r["type"], "title": r["title"], "url": r["url"]}
+            if code in CATALOG:
+                cat = CATALOG[code]
+                r = pick_resource_from_catalog(cat, req.learning_style)
+                resource = None
+                note = None
+                if r and r.get("url"):
+                    resource = {"type": r["type"], "title": r["title"], "url": r["url"]}
+                else:
+                    note = "No suitable resource in catalog for this learning_style."
+                resolved_courses.append({
+                    "courseCode": code,
+                    "courseName": cat["courseName"],
+                    "skillLevel": c.skillLevel,
+                    "resource": resource,
+                    "note": note
+                })
             else:
-                note = "No suitable resource in catalog for this learning_style."
-            resolved_courses.append({
-                "courseCode": code,
-                "courseName": cat["courseName"],
-                "skillLevel": c.skillLevel,
-                "resource": resource,
-                "note": note
-            })
-        else:
-            pick = gemini_pick_resource(courseName=name, learning_style=req.learning_style)
-            resolved_courses.append({
-                "courseCode": code,
-                "courseName": name,
-                "skillLevel": c.skillLevel,
-                "resource": pick.resource.model_dump() if pick.resource else None,
-                "note": pick.note or "Course not in catalog; whitelist-only resource selection attempted."
-            })
+                pick = gemini_pick_resource(courseName=name, learning_style=req.learning_style)
+                resolved_courses.append({
+                    "courseCode": code,
+                    "courseName": name,
+                    "skillLevel": c.skillLevel,
+                    "resource": pick.resource.model_dump() if pick.resource else None,
+                    "note": pick.note or "Course not in catalog; whitelist-only resource selection attempted."
+                })
+    except Exception as e:
+        if is_gemini_exception(e):
+            return gemini_error_response(e)
+        return api_error_response(str(e), 500)
 
     model_payload = {
         "learning_style": req.learning_style,
@@ -388,38 +401,45 @@ def roadmap_lite():
         out = generate_5step_plans(model_payload)
         return jsonify(out.model_dump())
     except Exception as e:
-        return jsonify({"error": "model_error", "details": str(e)}), 502
-
+        if is_gemini_exception(e):
+            return gemini_error_response(e)
+        return api_error_response(str(e), 502)
 
 @app.route("/chat", methods=["POST"])
 def chat():
     try:
         req = ChatRequest.model_validate(request.json or {})
     except ValidationError as e:
-        return jsonify({"error": "validation_error", "details": e.errors()}), 400
+        return api_error_response("validation_error", 400, e.errors())
 
     resolved_courses = []
-    for c in req.courses:
-        code = c.courseCode.strip()
-        name = c.courseName.strip()
-        if code in CATALOG:
-            cat = CATALOG[code]
-            r = pick_resource_from_catalog(cat, req.learning_style)
-            resource = {"type": r["type"], "title": r["title"], "url": r["url"]} if (r and r.get("url")) else None
-            resolved_courses.append({
-                "courseCode": code,
-                "courseName": cat["courseName"],
-                "skillLevel": c.skillLevel,
-                "resource": resource
-            })
-        else:
-            pick = gemini_pick_resource(courseName=name, learning_style=req.learning_style)
-            resolved_courses.append({
-                "courseCode": code,
-                "courseName": name,
-                "skillLevel": c.skillLevel,
-                "resource": pick.resource.model_dump() if pick.resource else None
-            })
+    try:
+        for c in req.courses:
+            code = c.courseCode.strip()
+            name = c.courseName.strip()
+
+            if code in CATALOG:
+                cat = CATALOG[code]
+                r = pick_resource_from_catalog(cat, req.learning_style)
+                resource = {"type": r["type"], "title": r["title"], "url": r["url"]} if (r and r.get("url")) else None
+                resolved_courses.append({
+                    "courseCode": code,
+                    "courseName": cat["courseName"],
+                    "skillLevel": c.skillLevel,
+                    "resource": resource
+                })
+            else:
+                pick = gemini_pick_resource(courseName=name, learning_style=req.learning_style)
+                resolved_courses.append({
+                    "courseCode": code,
+                    "courseName": name,
+                    "skillLevel": c.skillLevel,
+                    "resource": pick.resource.model_dump() if pick.resource else None
+                })
+    except Exception as e:
+        if is_gemini_exception(e):
+            return gemini_error_response(e)
+        return api_error_response(str(e), 500)
 
     payload = {
         "learning_style": req.learning_style,
@@ -430,5 +450,13 @@ def chat():
         "question": req.question
     }
 
-    answer = gemini_course_chat(payload)
-    return jsonify({"answer": answer})
+    try:
+        answer = gemini_course_chat(payload)
+        return jsonify({"answer": answer})
+    except Exception as e:
+        if is_gemini_exception(e):
+            return gemini_error_response(e)
+        return api_error_response(str(e), 502)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
